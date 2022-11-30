@@ -9,8 +9,8 @@ st.markdown("""
 Clique abaixo para gerar o arquivo dados_tratados.csv
 """)
 
-df_rouanet = pd.read_csv("/app/rouanet-censo-jus/app/rouanet.csv")
-df_censo = pd.read_csv("/app/rouanet-censo-jus/app/censo_estado.csv")
+df_rouanet = pd.read_csv("https://raw.githubusercontent.com/mirianbatista/rouanet-censo-jus/main/app/rouanet.csv")
+df_censo = pd.read_csv("https://raw.githubusercontent.com/mirianbatista/rouanet-censo-jus/main/app/censo_estado.csv")
 
 # unifica os datasets 
 df_rouanet_censo = df_rouanet.merge(df_censo, left_on='estado_ibge', right_on='codigo')
